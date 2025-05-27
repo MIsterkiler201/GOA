@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            animation: shrinkRotate 3s ease-in-out infinite;
+        }
+
+        @keyframes shrinkRotate {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cube"></div>
+
+</body>
+</html>

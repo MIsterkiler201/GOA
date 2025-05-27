@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            margin: 10px;
+            transition: all 0.5s ease;
+        }
+
+        .translate-1 {
+            transform: translate(50px, 50px);
+        }
+        .translate-2 {
+            transform: translate(-50px, -50px);
+        }
+        .translate-3 {
+            transform: translateX(100px);
+        }
+        .translate-4 {
+            transform: translateY(100px);
+        }
+
+        .scale-1 {
+            transform: scale(1.5);
+        }
+        .scale-2 {
+            transform: scale(0.5);
+        }
+        .scale-3 {
+            transform: scaleX(1.5);
+        }
+        .scale-4 {
+            transform: scaleY(1.5);
+        }
+
+        .rotate-1 {
+            transform: rotate(45deg);
+        }
+        .rotate-2 {
+            transform: rotate(-45deg);
+        }
+        .rotate-3 {
+            transform: rotateX(45deg);
+        }
+        .rotate-4 {
+            transform: rotateY(45deg);
+        }
+        .rotate-5 {
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container translate-1">Translate 50px, 50px</div>
+    <div class="container translate-2">Translate -50px, -50px</div>
+    <div class="container translate-3">TranslateX 100px</div>
+    <div class="container translate-4">TranslateY 100px</div>
+
+    <div class="container scale-1">Scale 1.5</div>
+    <div class="container scale-2">Scale 0.5</div>
+    <div class="container scale-3">ScaleX 1.5</div>
+    <div class="container scale-4">ScaleY 1.5</div>
+
+    <div class="container rotate-1">Rotate 45deg</div>
+    <div class="container rotate-2">Rotate -45deg</div>
+    <div class="container rotate-3">RotateX 45deg</div>
+    <div class="container rotate-4">RotateY 45deg</div>
+    <div class="container rotate-5">RotateZ 45deg</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Interaction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .box {
+            width: 150px;
+            height: 200px;
+            background-color: lightblue;
+            transition: all 0.3s ease;
+        }
+
+        /* 1. Box moves left 50px on click */
+        .move-left {
+            position: relative;
+        }
+
+        .move-left:active {
+            left: -50px;
+        }
+
+        /* 2. Box scales on click */
+        .scale-box {
+            position: relative;
+        }
+
+        .scale-box:active {
+            transform: scale(1.5);
+        }
+
+        /* 2. Box scales down */
+        .scale-box-small:active {
+            transform: scale(0.5);
+        }
+
+        /* 3. Box moves diagonally on click */
+        .move-diagonal {
+            position: relative;
+        }
+
+        .move-diagonal:active {
+            top: 50px;
+            left: 50px;
+        }
+
+        /* 4. Box rotates counterclockwise */
+        .rotate-box {
+            position: relative;
+        }
+
+        .rotate-box:active {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Box that moves left -->
+        <div class="box move-left"></div>
+        <!-- 2. Box that scales on click -->
+        <div class="box scale-box"></div>
+        <!-- 2. Box that scales down -->
+        <div class="box scale-box-small"></div>
+        <!-- 3. Box that moves diagonally -->
+        <div class="box move-diagonal"></div>
+        <!-- 4. Box that rotates counterclockwise -->
+        <div class="box rotate-box"></div>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Interaction 2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 150px;
+            height: 200px;
+            background-color: lightgreen;
+            transition: all 0.3s ease;
+        }
+
+        /* 2. Box moves 50px to the right, rotates 25deg, and scales 4x */
+        .move-rotate-scale {
+            position: relative;
+        }
+
+        .move-rotate-scale:active {
+            left: 50px;
+            transform: rotate(25deg) scale(4);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box move-rotate-scale"></div>
+
+</body>
+</html>

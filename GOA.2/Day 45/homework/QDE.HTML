@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change Animation</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation: colorChange 2s forwards;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: red;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Animation</title>
+    <style>
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-150px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ball"></div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotation Animation</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            animation: rotateBox 3s infinite;
+        }
+
+        @keyframes rotateBox {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Color Change</title>
+    <style>
+        .text {
+            font-size: 30px;
+            animation: textColorChange 3s infinite;
+        }
+
+        @keyframes textColorChange {
+            0% {
+                color: red;
+            }
+            50% {
+                color: yellow;
+            }
+            100% {
+                color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text">This is a colorful text!</div>
+
+</body>
+</html>
