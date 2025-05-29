@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ფერადი ბურთი</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color:white
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: red
+      border-radius: 50%;
+      animation: growShrink 3s ease-in-out infinite, move 5s ease-in-out infinite;
+    }
+
+    @keyframes growShrink {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(2);
+      }
+    }
+
+    @keyframes move {
+      0%, 100% {
+        transform: translateX(0) translateY(0);
+      }
+      50% {
+        transform: translateX(150px) translateY(100px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ball"></div>
+
+</body>
+</html>

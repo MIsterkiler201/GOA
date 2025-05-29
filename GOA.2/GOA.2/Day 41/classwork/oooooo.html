@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>დავალება</title>
+    <style>
+        /* პირველი დავალება: მშობელი და შვილი div */
+        .parent {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            position: relative; /* მშობელს დავუსახეთ relative პოზიცია */
+            margin-bottom: 50px; /* რათა განსხვავება იყოს პირველ და მეორე დავალებას შორის */
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute; /* შვილს absolute პოზიცია */
+            top: 50px; /* 50px-ზე მაღლა */
+            left: 50px; /* 50px-ზე მარცხნივ */
+        }
+
+        /* მეორე დავალება: ფოტო */
+        .image-container {
+            position: relative; /* ფოტოს absolute პოზიცია მუშაობს კონტეინერის მიმართ */
+            width: 100%; /* კონტეინერი სრულ სიგრძეზე */
+            overflow: hidden; /* ფოტოს ნაწილი ვეღარ გამოვა კონტეინერიდან */
+        }
+
+        .image {
+            position: absolute;
+            left: -50%; /* ფოტო 50% მარცხნივ გადავა */
+            top: 0;
+            width: 100%; /* ფოტოს სიგრძე სრულად */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- პირველი დავალება: მშობელი და შვილი div -->
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <!-- მეორე დავალება: ფოტო -->
+    <div class="image-container">
+        <img src="https://via.placeholder.com/600" alt="Image" class="image">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson Card</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .lesson-card {
+      background-color: black;
+      padding: 20px 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 500px;
+    }
+
+    .lesson-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .lesson-icon img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .lesson-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lesson-info span:first-child {
+      color: white;
+      font-size: 14px;
+    }
+
+    .lesson-info span:last-child {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .checkmark img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lesson-card">
+    <div class="lesson-left">
+      <div class="lesson-icon">
+       <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Lesson Icon">
+      </div>
+      <div class="lesson-info">
+        <span>Lesson</span>
+        <span>ThE KING</span>
+      </div>
+    </div>
+    <div class="checkmark">
+      <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Checkmark Icon">
+    </div>
+  </div>
+
+</body>
+</html>

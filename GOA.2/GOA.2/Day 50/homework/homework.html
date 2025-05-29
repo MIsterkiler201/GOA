@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Studio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --font: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      font-family: var(--font);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .meta {
+      font-size: 13px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .meta span {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .image-container {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>HOME -</div>
+    <nav>
+      <a href="#">CLIENT</a>
+      <a href="#">DISCIPLINES</a>
+      <a href="#">DELIVERABLES</a>
+      <a href="#">NUM</a>
+      <a href="#">ARCHIVE</a>
+      <a href="#">PLAY</a>
+      <a href="#">INFO</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="meta">
+      <span>NIKE NOCTA</span>
+      <span>Design, Treatment & More</span>
+      <span>Brand Collateral</span>
+    </div>
+    <div class="image-container">
+      <img src="lolo.jpg" alt="NIKE NOCTA Concept">
+    </div>
+  </div>
+</body>
+</html>

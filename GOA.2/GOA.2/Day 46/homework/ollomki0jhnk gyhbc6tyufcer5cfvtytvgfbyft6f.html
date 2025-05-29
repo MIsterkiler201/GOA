@@ -1,0 +1,123 @@
+<!-- 1. შექმენით მარტივი ანიმაცია, რომელიც ცვლის 200x200 div-ის ფონს ფერს წითელიდან ლურჯში @keyframes-ის გამოყენებით, ანიმაცია უნდა გაგრძელდეს 2 წამი.
+
+2. შექმენით მრგვალი, ლურჯი დივი, ანიმაციის მეშვეობით კი მისი მოძრაობა ბურთის ხტუნავს მიამსგავსეთ, გამოიყენეთ @keyframe-ები.
+
+3. შექმენით მარტივი ანიმაცია, რომელიც 200x200 div-ს 360 გრადუსით გადმოატრიალებს, გამოიყენეთ @keyframes და rotate().
+
+4. შექმენით ტექსტი, შემდეგ კი ანიმაციის მეშვეობით შეუცვალეთ ფერი, გამოიყენეთ @keyframes.
+
+ 5. შექმენით ანიმაცია, სადაც 200x200 div გაიზრდება ზომაში, შემდეგ კი თავის საწყის ზომაზე 2-ჯერ დაპატარავდება.  -->
+
+
+
+
+
+!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS ანიმაციები</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      padding: 30px;
+    }
+
+    /* 1. ფონის ფერის შეცვლა */
+    .color-change {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      animation: changeColor 2s forwards;
+    }
+
+    @keyframes changeColor {
+      to {
+        background-color: blue;
+      }
+    }
+
+    /* 2. ბურთის ხტუნვა */
+    .bouncing-ball {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      border-radius: 50%;
+      position: relative;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        top: 0;
+      }
+      50% {
+        top: 150px;
+      }
+    }
+
+    /* 3. გადატრიალება */
+    .rotate-box {  
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      animation: spin 2s linear forwards;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 4. ტექსტის ფერის შეცვლა */
+    .colorful-text {
+      font-size: 32px;
+      animation: textColorChange 3s infinite alternate;
+    }
+
+    @keyframes textColorChange {
+      from {
+        color: black;
+      }
+      to {
+        color: red;
+      }
+    }
+
+    /* 5. ზომის გაზრდა/დაპატარავება */
+    .resize-box {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      animation: resizeAnimation 3s forwards;
+    }
+
+    @keyframes resizeAnimation {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="color-change"></div>
+  <div class="bouncing-ball"></div>
+  <div class="rotate-box"></div>
+  <h1 class="colorful-text">გამარჯობა!</h1>
+  <div class="resize-box"></div>
+
+</body>
+</html>
+ 

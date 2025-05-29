@@ -1,0 +1,167 @@
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 53 | DOM - მსგავსი საიტი</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better aesthetics (optional, but good for design) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background similar to the image */
+            color: #e2e8f0; /* Light text color */
+        }
+        /* Custom styles for the hamburger menu icon if needed */
+        .hamburger-icon {
+            cursor: pointer;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <header class="flex justify-between items-center mb-8 bg-gray-900 p-4 rounded-lg shadow-md">
+        <div class="flex items-center space-x-4">
+            <h1 class="text-3xl font-bold text-orange-400">Level 53 | DOM</h1>
+        </div>
+        <nav class="flex items-center space-x-6">
+            <a href="#" class="text-gray-300 hover:text-white transition duration-200">SHOP</a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-200">EXPLORE</a>
+            <button class="text-gray-300 hover:text-white text-2xl hamburger-icon">&#9776;</button>
+        </nav>
+    </header>
+
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg mb-8 max-w-2xl mx-auto border border-gray-700">
+        <div class="flex items-center justify-between py-3 border-b border-gray-700">
+            <span class="text-green-500 text-xl">&#10003;</span>
+            <span class="ml-3 text-lg font-medium text-gray-200">Lesson: The Document Object Model</span>
+            <span class="text-green-500 text-xl">&#10003;</span>
+        </div>
+        <div class="flex items-center justify-between py-3">
+            <span class="text-green-500 text-xl">&#10003;</span>
+            <span class="ml-3 text-lg font-medium text-gray-200">Quiz: Module quiz</span>
+            <span class="text-green-500 text-xl">&#10003;</span>
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+        <div class="bg-green-700 p-8 rounded-lg shadow-xl flex flex-col items-center justify-center w-full md:w-1/3 h-72 md:h-80">
+            <div class="text-orange-400 text-6xl font-extrabold mb-4">G</div>
+            <div class="text-white text-5xl font-extrabold">SMITH</div>
+        </div>
+
+        <div class="bg-orange-600 p-8 rounded-lg shadow-xl flex flex-col items-center justify-center text-center w-full md:w-2/3 h-72 md:h-80">
+            <p class="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
+                WITH EVERY SHEET<br>OF PAPER, FEEL THE<br>DIFFERENCE.
+            </p>
+        </div>
+    </div>
+
+    <hr class="border-gray-700 my-12">
+
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto border border-gray-700">
+        <h2 class="text-2xl font-bold mb-6 text-orange-400">JavaScript დავალებები:</h2>
+
+        <p id="paragraphToChange" class="mb-3 text-gray-300 text-lg">ეს არის აბზაცი, რომლის ტექსტიც შეიცვლება.</p>
+
+        <h3 id="headingToColor" class="text-xl font-semibold mb-3 text-gray-300">ეს არის სათაური, რომლის ფერიც შეიცვლება.</h3>
+
+        <div id="divToCenter" class="bg-gray-700 p-5 rounded-md mb-5 text-gray-300 text-lg">
+            ეს არის div ელემენტი, რომლის ტექსტიც ცენტრში გასწორდება.
+        </div>
+
+        <p id="paragraphBgToChange" class="p-3 rounded-md mb-3 text-gray-300 text-lg">ეს არის აბზაცი, რომლის ფონის ფერიც შეიცვლება.</p>
+
+        <p id="paragraphRed" class="mb-2 text-gray-300 text-lg">ეს აბზაცი წითლად შეიღებება.</p>
+        <p id="paragraphGreen" class="mb-2 text-gray-300 text-lg">ეს აბზაცი მწვანედ შეიღებება.</p>
+        <p id="paragraphOrange" class="mb-2 text-gray-300 text-lg">ეს აბზაცი ნარინჯისფრად შეიღებება.</p>
+
+        <button id="applyChangesBtn" class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+            ცვლილებების გამოყენება
+        </button>
+    </div>
+
+    <script>
+        // JavaScript კოდი DOM-ის მანიპულირებისთვის
+        // კოდი გაეშვება მხოლოდ მას შემდეგ, რაც გვერდი სრულად ჩაიტვირთება
+        document.addEventListener('DOMContentLoaded', () => {
+            // ვიპოვით ღილაკს მისი ID-ით
+            const applyChangesBtn = document.getElementById('applyChangesBtn');
+
+            // ღილაკზე დაჭერისას მოხდება ყველა ცვლილება
+            if (applyChangesBtn) {
+                applyChangesBtn.addEventListener('click', () => {
+                    console.log("ღილაკზე დაჭერა დაფიქსირდა. ვასრულებთ დავალებებს.");
+
+                    // 1. შეცვალეთ კონკრეტული ID-ის მქონე აბზაცის ტექსტი „hello, JavaScript!"-ით textContent-ის გამოყენებით.
+                    const paragraphToChange = document.getElementById('paragraphToChange');
+                    if (paragraphToChange) {
+                        paragraphToChange.textContent = "hello, JavaScript!";
+                        console.log("დავალება 1 შესრულდა: 'paragraphToChange' ტექსტი შეიცვალა.");
+                    } else {
+                        console.error("შეცდომა: 'paragraphToChange' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+
+                    // 2. აირჩიეთ სათაური მისი ID-ით და შეცვალეთ მისი ტექსტის ფერი ლურჯად JavaScript-ის გამოყენებით.
+                    const headingToColor = document.getElementById('headingToColor');
+                    if (headingToColor) {
+                        headingToColor.style.color = "blue";
+                        console.log("დავალება 2 შესრულდა: 'headingToColor' ფერი ლურჯად შეიცვალა.");
+                    } else {
+                        console.error("შეცდომა: 'headingToColor' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+
+                    // 3. გაასწორეთ div-ის ტექსტი ცენტრში JavaScript-ის გამოყენებით (შეცვალეთ style.textAlign თვისება).
+                    const divToCenter = document.getElementById('divToCenter');
+                    if (divToCenter) {
+                        divToCenter.style.textAlign = "center";
+                        console.log("დავალება 3 შესრულდა: 'divToCenter' ტექსტი ცენტრში გასწორდა.");
+                    } else {
+                        console.error("შეცდომა: 'divToCenter' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+
+                    // 4. შეცვალეთ მოცემული ID-ის მქონე აბზაცის ფონის ფერი ყვითლად JavaScript-ის გამოყენებით.
+                    const paragraphBgToChange = document.getElementById('paragraphBgToChange');
+                    if (paragraphBgToChange) {
+                        paragraphBgToChange.style.backgroundColor = "yellow";
+                        paragraphBgToChange.style.color = "black"; // Make text visible on yellow background
+                        console.log("დავალება 4 შესრულდა: 'paragraphBgToChange' ფონის ფერი ყვითლად შეიცვალა.");
+                    } else {
+                        console.error("შეცდომა: 'paragraphBgToChange' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+
+                    // 5. სამი სხვადასხვა აბზაცის ფერი შეცვალეთ წითლად, მწვანედ და ნარინჯისფრად მათი ინდივიდუალური ID-ების გამოყენებით.
+                    const paragraphRed = document.getElementById('paragraphRed');
+                    const paragraphGreen = document.getElementById('paragraphGreen');
+                    const paragraphOrange = document.getElementById('paragraphOrange');
+
+                    if (paragraphRed) {
+                        paragraphRed.style.color = "red";
+                        console.log("დავალება 5 (წითელი) შესრულდა.");
+                    } else {
+                        console.error("შეცდომა: 'paragraphRed' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+
+                    if (paragraphGreen) {
+                        paragraphGreen.style.color = "green";
+                        console.log("დავალება 5 (მწვანე) შესრულდა.");
+                    } else {
+                        console.error("შეცდომა: 'paragraphGreen' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+
+                    if (paragraphOrange) {
+                        paragraphOrange.style.color = "orange";
+                        console.log("დავალება 5 (ნარინჯისფერი) შესრულდა.");
+                    } else {
+                        console.error("შეცდომა: 'paragraphOrange' ID-ის მქონე ელემენტი ვერ მოიძებნა.");
+                    }
+                });
+            } else {
+                console.error("შეცდომა: 'applyChangesBtn' ID-ის მქონე ღილაკი ვერ მოიძებნა.");
+            }
+        });
+    </script>
+</body>
+</html>

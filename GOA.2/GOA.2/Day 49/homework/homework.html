@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ბუთონის მაგალითი</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ბულის ღილაკები</h1>
+
+  <button onclick="showValue(true)">მართალია</button>
+  <button onclick="showValue(false)">მცდარია</button>
+  <button onclick="showValue(true)">True</button>
+  <button onclick="showValue(false)">False</button>
+
+  <script>
+
+    let x = true;
+    let y = false;
+
+
+    console.log("ცვლადი x =", x);
+    console.log("ცვლადი y =", y);
+
+
+    function showValue(value) {
+      console.log("ღილაკის მნიშვნელობაა:", value);
+    }
+  </script>
+
+</body>
+</html>
